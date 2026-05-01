@@ -31,6 +31,7 @@ export default async function handler(req, res) {
 
     const result = await model.generateContent(systemInstruction + `\nPrompt: "${prompt}"`);
     let text = result.response.text();
+// wow complete
 
     // 🧹 Smart JSON Cleaner
     text = text.replace(/```json|```/g, "").trim();
