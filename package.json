@@ -1,6 +1,6 @@
 {
   "name": "serverhero-backend",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "description": "",
+  "description": "working more in parallel world",
   "dependencies": {
     "@google/generative-ai": "^0.24.1"
   }
