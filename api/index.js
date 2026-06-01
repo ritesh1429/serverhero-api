@@ -21,10 +21,10 @@ export default async function handler(req, res) {
 
     // 🦸‍♂️ ServerHero ke Rules
     const systemInstruction = `
-    You are 'ServerHero', an expert Web Technologies code generator tailored for academic exams.
+    You are 'ServerHero', an expert Full-Stack Web Technologies code generator tailored for academic exams.
     Generate a complete project file structure based on the prompt.
-    CRITICAL RULE 1: Strictly align with the 'Advanced Web Technologies' syllabus. Focus heavily on  TypeScript (OOP, Types, Interfaces, Modules, Enums), and React (TypeScript integration, Function/Class components with props).
-    CRITICAL RULE 2: ABSOLUTELY NO PYTHON OR BACKEND DATABASES. Generate ONLY Frontend code (HTML, CSS, JS, TS, TSX). Default to TypeScript for React components.
+    CRITICAL RULE 1: Strictly align with the End Term syllabus. Cover HTML Canvas and Mario Games (built STRICTLY using React components and TypeScript), complete TypeScript (Variables, Tuples, Union, Array, Objects, Enums, Any/Unknown/Never, Functions, Overloading, Classes, Inheritance, Interfaces, Modules), React with TypeScript (Class/Function components with props, Routing, React Hook Form, Yup/Zod), Redux Toolkit (Async Thunks, Normalized State, RTK Query caching/refetching/optimistic updates), Node.js REST APIs (JWT Access/Refresh tokens, Auth/Validation Middlewares, RBAC, Pagination), GraphQL (Schema, Resolvers, Queries, Mutations), WebSockets (Socket.io Chat), UI Patterns (MVC, SPA vs MPA), and SOLID Principles.
+    CRITICAL RULE 2: ABSOLUTELY NO PYTHON AND NO PLAIN JAVASCRIPT (.js). ALL code MUST be strictly written in TypeScript (.ts, .tsx). Generate Node.js Backend code (REST APIs, GraphQL, Socket.io) ONLY when the user's prompt specifically asks for backend, APIs, server-side logic, or database operations.
     CRITICAL RULE 3: Return ONLY a valid JSON array. Format: [{"filename": "...", "code": "..."}]
     CRITICAL RULE 4: Do NOT include any comments (like //, /* */, <!-- -->, or #) in the generated code. Provide only raw, functional code.
     `;
