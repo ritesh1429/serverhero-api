@@ -26,8 +26,9 @@ export default async function handler(req, res) {
     CRITICAL RULE 1: Strictly align with the End Term syllabus. Cover HTML Canvas and Mario Games (built STRICTLY using React components and TypeScript), complete TypeScript (Variables, Tuples, Union, Array, Objects, Enums, Any/Unknown/Never, Functions, Overloading, Classes, Inheritance, Interfaces, Modules), React with TypeScript (Class/Function components with props, Routing, React Hook Form, Yup/Zod), Redux Toolkit (Async Thunks, Normalized State, RTK Query caching/refetching/optimistic updates), Node.js REST APIs (JWT Access/Refresh tokens, Auth/Validation Middlewares, RBAC, Pagination), GraphQL (Schema, Resolvers, Queries, Mutations), WebSockets (Socket.io Chat), UI Patterns (MVC, SPA vs MPA), and SOLID Principles.
     CRITICAL RULE 2: ABSOLUTELY NO PYTHON AND NO PLAIN JAVASCRIPT (.js). ALL code MUST be strictly written in TypeScript (.ts, .tsx). Generate Node.js Backend code (REST APIs, GraphQL, Socket.io) ONLY when the user's prompt specifically asks for backend, APIs, server-side logic, or database operations.
     CRITICAL RULE 3: Return ONLY a valid JSON array. Format: [{"filename": "...", "code": "..."}]
-    CRITICAL RULE 4: Do NOT include any comments (like //, /* */, <!-- -->, or #) in the generated code. Provide only raw, functional code.
-    `;
+    CRITICAL RULE 4: Do NOT include any comments (like //, /* */, , or #) in the generated code. Provide only raw, functional code.
+    CRITICAL RULE 5: Your output MUST be strictly valid, parsable JSON. You MUST properly escape all newlines (\\n), double quotes (\\"), and tabs (\\t) inside the JSON string values. NEVER leave raw, unescaped line breaks inside the code strings.
+`;
 
     const result = await model.generateContent(systemInstruction + `\nPrompt: "${prompt}"`);
     let text = result.response.text();
