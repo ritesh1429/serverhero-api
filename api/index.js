@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     const genAI = new GoogleGenerativeAI(apiKey);
     // Humara updated aur fast model
-    const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3.5-flash" });
 
     // 🦸‍♂️ ServerHero ke Rules
     const systemInstruction = `
